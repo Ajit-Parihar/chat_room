@@ -1,0 +1,9 @@
+<%= form_with model: Message.new, url: messages_path, data: { turbo_stream: true }, local: false do |form| %>
+  <div>
+    <%= form.label :content, "Message" %>
+    <%= form.text_field :content, required: true %>
+  </div>
+  <div>
+    <%= form.submit "Send" %>
+  </div>
+<% end %>
